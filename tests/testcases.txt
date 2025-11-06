@@ -1,0 +1,61 @@
+# 30 lines; pairs of numbers. Lines beginning with '#' are ignored by the program (it reads token pairs only).
+# 1 — basic integers
+123 456
+# 2 — simple decimals
+1.25 2.75
+# 3 — mixed int/decimal
+100 0.001
+# 4 — leading zeros
+000123 000077
+# 5 — signs
++10 -3
+# 6 — negative + negative
+-5 -7
+# 7 — carry across decimal
+9.99 0.02
+# 8 — different frac lengths
+3.5 3.125
+# 9 — long fractional alignment
+0.0005 0.0006
+# 10 — long integer carry
+9999999999999999 1
+# 11 — plus sign explicit
++001.500 +000.500
+# 12 — zero normalization
+-0.000 0.000
+# 13 — big mix
+12345678901234567890.12345000 0.00000678
+# 14 — subtraction via sign (|A| > |B|)
+10.5 -2.75
+# 15 — subtraction via sign (|B| > |A|)
+-2.75 10.5
+# 16 — equal and opposite
+42 -42
+# 17 — fractional cancel
+1.500 -0.500
+# 18 — fractional borrow
+10.0001 -0.9999
+# 19 — many carries and borrows
+1000.000 -0.001
+# 20 — large fractional lengths
+0.123456789 0.987654321
+# 21 — invalid: missing frac digit after dot
+5. +1
+# 22 — invalid: missing int digit before dot
+-.5 1
+# 23 — invalid: double sign
++-1 2
+# 24 — invalid: alpha chars
+12A 3
+# 25 — invalid: extra dot
+1.2.3 4
+# 26 — valid edges
+0 0
+# 27 — valid tiny decimals
+0.0000001 0.0000009
+# 28 — valid big negatives
+-999999999999.999 -0.001
+# 29 — valid big positives
++999999999999.999 +0.001
+# 30 — tricky align
+0000.0100 000.9900
